@@ -1,9 +1,37 @@
-.homePage_Animation{
-    width: 55%;
+html {
+    scroll-behavior: smooth;
+}
+.homePage_Animation {
+    width: 50%;
     margin: auto;
 }
 
 body {
     background-color: #182E7C;
+}
+
+.nav-links {
+    position: sticky;
+    top: 0;
+    background-color: #FEC63D;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+i {
+    padding-right: 30px;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+.nav-links a {
+    text-decoration: none;
+}
+
+.intro-heading {
+    color: #FEC63D;
+    margin-left: 30px;
 }
 

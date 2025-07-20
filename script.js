@@ -1,4 +1,6 @@
 const typography_ids = ['bottomOfT_Typography', 'topOfT_Typography', 'Y_typography','bottomOfP_Typography', 'topOfP_Typography', 'O_Typography', 'G_Typography','R_Typography', 'A_Typography', 'bottomOfP2_Typography', 'topOfP2_Typography', 'H_Typography', 'Y2_Typography', 'underline_Typography'];
+const circle_ids = ['Typography_Circle', 'Repetition_Circle', 'Colour_And_Contrast_Circle','Size_And_Scale_Circle'];
+const line_ids = ['Typography_line', 'Repetition_line', 'Colour_And_Contrast_line', 'Size_And_Scale_line',];
 
 const animationDuration = 0.25;
 
@@ -10,10 +12,38 @@ typography_ids.forEach((id, index) => {
     // Set stroke dash properties initially
     TweenMax.set(path, { strokeDasharray: length, strokeDashoffset: length });
 
-    // Delay each subsequent path by the dur ation of previous animation
+    // Delay each subsequent path by the duration of previous animation
     TweenMax.to(path, animationDuration, {
       strokeDashoffset: 0,
       delay: index * animationDuration // 0 for first, 3s for second
+    });
+  }
+});
+
+circle_ids.forEach((id) => {
+  const path = document.getElementById(id);
+  if (path) {
+    const length = path.getTotalLength();
+    
+    // Set stroke dash properties initially
+    TweenMax.set(path, { strokeDasharray: length, strokeDashoffset: length });
+
+    TweenMax.to(path, 3, {
+      strokeDashoffset: 0,
+    });
+  }
+});
+
+line_ids.forEach((id) => {
+  const path = document.getElementById(id);
+  if (path) {
+    const length = path.getTotalLength();
+    
+    // Set stroke dash properties initially
+    TweenMax.set(path, { strokeDasharray: length, strokeDashoffset: length });
+
+    TweenMax.to(path, 3, {
+      strokeDashoffset: 0,
     });
   }
 });
