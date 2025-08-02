@@ -7,3 +7,145 @@ body {
     background-color: #182E7C;
 }
 
+<<<<<<< Updated upstream
+=======
+.nav-links {
+    position: sticky;
+    top: 0;
+    background-color: #FEC63D;
+    padding: 0.4rem;
+    text-align: center;
+}
+
+i {
+    padding-right: 30px;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+.nav-links a {
+    text-decoration: none;
+}
+
+.intro-heading {
+    color: #FEC63D;
+    margin-left: 30px;
+}
+
+.dropbtn {
+  background-color: #FEC63D;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  opacity: 0;
+  position: absolute;
+  background-color: #FEC63D;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+  z-index: 1;
+  transform: translateY(-10px);
+  transition: all 0.5s;
+  pointer-events: none;
+  left: 30px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-style: solid;
+  border-width: 1.25px;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #FEC63D;
+}
+
+#Repitition_1 {
+  opacity: 0;
+}
+
+#Repitition_2 {
+  opacity: 0;
+}
+
+#Repitition_3 {
+  opacity: 0;
+}
+
+#SizeAndScale_Circle {
+  opacity: 0;
+}
+
+.colour_and_contrast_glow:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 1px #FFFFFF) drop-shadow(0 0 3px #FFFFFF);
+}
+
+.repetition_glow:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 1px #FFFFFF) drop-shadow(0 0 3px #FFFFFF);
+}
+
+.size_and_scale_glow:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 1px #FFFFFF) drop-shadow(0 0 3px #FFFFFF);
+}
+
+.typography_glow:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 1px #FFFFFF) drop-shadow(0 0 3px #FFFFFF);
+}
+
+#Size_SizeAndScale {
+  opacity: 0;
+}
+#AndScale_SizeAndScale {
+  opacity: 0;
+}
+
+#AndContrast_ColourAndContrast {
+  opacity: 0;
+}
+
+#Colour_ColourAndContrast {
+  opacity: 0;
+}
+
+#bottomOfT_Typography, #topOfT_Typography, 
+#Y_typography, #bottomOfP_Typography, #topOfP_Typography, 
+#O_Typography, #G_Typography, #R_Typography, #A_Typography, 
+#bottomOfP2_Typography, #topOfP2_Typography, #H_Typography, 
+#Y2_Typography, #underline_Typography {
+  opacity: 0;
+}
+
+
+#learn_more {
+  opacity: 0;
+}
+>>>>>>> Stashed changes
