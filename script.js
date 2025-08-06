@@ -1,4 +1,6 @@
 const typography_ids = ['bottomOfT_Typography', 'topOfT_Typography', 'Y_typography','bottomOfP_Typography', 'topOfP_Typography', 'O_Typography', 'G_Typography','R_Typography', 'A_Typography', 'bottomOfP2_Typography', 'topOfP2_Typography', 'H_Typography', 'Y2_Typography', 'underline_Typography'];
+const circle_ids = ['Typography_Circle', 'Repetition_Circle', 'Colour_And_Contrast_Circle', 'Size_And_Scale_Circle'];
+const line_ids = ['Typography_line', 'Repetition_line', 'Size_And_Scale_line', 'Colour_And_Contrast_line'];
 
 const animationDuration = 0.25;
 
@@ -7,17 +9,10 @@ typography_ids.forEach((id, index) => {
   if (path) {
     const length = path.getTotalLength();
 
-<<<<<<< Updated upstream
-    // Delay each subsequent path by the dur ation of previous animation
-    TweenMax.to(path, animationDuration, {
-      strokeDashoffset: 0,
-      delay: index * animationDuration // 0 for first, 3s for second
-=======
     TweenMax.set(path, {
       strokeDasharray: length,
       strokeDashoffset: length,
       opacity: 0
->>>>>>> Stashed changes
     });
     
     const tl = new TimelineMax({ delay: 3 + index * animationDuration });
@@ -27,11 +22,6 @@ typography_ids.forEach((id, index) => {
   }
 });
 
-<<<<<<< Updated upstream
-TweenMax.to('#Repitition_1', 1.5, {y:61, opacity:0.4});
-TweenMax.to('#Repitition_2', 1.5, {opacity: 0.65});
-TweenMax.to('#Repitition_3', 1.5, {y:79});
-=======
 circle_ids.forEach((id) => {
   const path = document.getElementById(id);
   if (path) {
@@ -62,17 +52,9 @@ line_ids.forEach((id) => {
   }
 });
 
-TweenMax.to('#design_box', 1, {x:200, ease: "power3.inOut"});
-TweenMax.to('#principles_box', 1, {x:250, ease: "power3.inOut", delay: 0.5});
-TweenMax.to('#one_zero_one_box', 2, {x:200, ease: "power3.in"});
-TweenMax.to('#one_zero_one_underline_box', 2, {x:150, ease: "power3.inOut", delay: 1});
-TweenMax.to('#learn_more', 2, {opacity: 1, delay: 2});
->>>>>>> Stashed changes
-
 TweenMax.to('#Repitition_1', 1.5, {y:13, opacity: 0.4, delay: 3});
 TweenMax.to('#Repitition_2', 1.5, {opacity: 0.65, delay: 3});
 TweenMax.to('#Repitition_3', 1.5, {opacity: 1, y:30, delay: 3});
-
 
 const tl = gsap.timeline({  delay: 3 });
 
@@ -111,17 +93,40 @@ TweenMax.to("#AndScale_SizeAndScale", {
   y: 200,
   x: 38,
   fill: "#FEC63D",
-<<<<<<< Updated upstream
-  stroke: "#FEC63D"
-});
-=======
   stroke: "#FEC63D",
   opacity: 1,
   delay: 3
 });
 
-TweenMax.to("#Design_HomePage", {
-  duration: 3,
-  opacity: 1
-});
->>>>>>> Stashed changes
+TweenMax.to('#design_box', 1, {x:200, ease: "power3.inOut"});
+TweenMax.to('#principles_box', 1, {x:250, ease: "power3.inOut", delay: 0.5});
+TweenMax.to('#one_zero_one_box', 2, {x:200, ease: "power3.in"});
+TweenMax.to('#one_zero_one_underline_box', 2, {x:150, ease: "power3.inOut", delay: 1});
+TweenMax.to('#learn_more', 2, {opacity: 1, delay: 2});
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".intro-header", {
+    scrollTrigger: {
+      trigger: "#intro-content",
+      start: "top 90%", // when top of #intro-content hits 80% down the viewport
+      toggleActions: "play reverse play reverse"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
+
+  gsap.from(".intro-text", {
+    scrollTrigger: {
+      trigger: "#intro-content",
+      start: "top 90%",
+      toggleActions: "play reverse play reverse"
+    },
+    y: 40,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out",
+    delay: 0.2
+  });
