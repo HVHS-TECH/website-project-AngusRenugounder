@@ -109,7 +109,7 @@ TweenMax.to('#learn_more', 2, {opacity: 1, delay: 2});
   gsap.from(".intro-header", {
     scrollTrigger: {
       trigger: "#intro-content",
-      start: "top 90%", // when top of #intro-content hits 80% down the viewport
+      start: "top 90%",
       toggleActions: "play reverse play reverse"
     },
     y: 30,
@@ -119,6 +119,19 @@ TweenMax.to('#learn_more', 2, {opacity: 1, delay: 2});
   });
 
   gsap.from(".intro-text", {
+    scrollTrigger: {
+      trigger: "#intro-content",
+      start: "top 90%",
+      toggleActions: "play reverse play reverse"
+    },
+    y: 40,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out",
+    delay: 0.2
+  });
+
+    gsap.from(".intro-list", {
     scrollTrigger: {
       trigger: "#intro-content",
       start: "top 90%",

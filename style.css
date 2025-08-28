@@ -4,6 +4,18 @@
     margin: auto;
 }
 
+@media screen and (min-width: 768px) {
+  .homePage_Animation {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .homePage_Animation {
+    width: 100%;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -178,4 +190,19 @@ i:hover {
   font-size: 1.2rem;
   line-height: 1.5;
   margin-top: 10px;
+}
+
+.intro-list {
+  color: #FEC63D;
+  font-size: 1.3rem;
+}
+
+.intro-list-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;  
+}
+
+.Typography_Animation {
+  width: 30%;
 }
