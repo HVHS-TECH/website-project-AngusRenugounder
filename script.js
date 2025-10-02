@@ -103,10 +103,11 @@ TweenMax.to('#principles_box', 1, {x:250, ease: "power3.inOut", delay: 0.5});
 TweenMax.to('#one_zero_one_box', 2, {x:200, ease: "power3.in"});
 TweenMax.to('#one_zero_one_underline_box', 2, {x:150, ease: "power3.inOut", delay: 1});
 TweenMax.to('#learn_more', 2, {opacity: 1, delay: 2});
+TweenMax.to('#learn_more_text', 2, {opacity: 1, delay: 2});
 
   gsap.registerPlugin(ScrollTrigger);
 
-  gsap.from(".intro-header", {
+  gsap.from("#intro-content", {
     scrollTrigger: {
       trigger: "#intro-content",
       start: "top 90%",
@@ -116,30 +117,4 @@ TweenMax.to('#learn_more', 2, {opacity: 1, delay: 2});
     opacity: 0,
     duration: 1,
     ease: "power2.out"
-  });
-
-  gsap.from(".intro-text", {
-    scrollTrigger: {
-      trigger: "#intro-content",
-      start: "top 90%",
-      toggleActions: "play reverse play reverse"
-    },
-    y: 40,
-    opacity: 0,
-    duration: 1,
-    ease: "power2.out",
-    delay: 0.2
-  });
-
-    gsap.from(".intro-list", {
-    scrollTrigger: {
-      trigger: "#intro-content",
-      start: "top 90%",
-      toggleActions: "play reverse play reverse"
-    },
-    y: 40,
-    opacity: 0,
-    duration: 1,
-    ease: "power2.out",
-    delay: 0.2
   });
