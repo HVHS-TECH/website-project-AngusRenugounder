@@ -83,7 +83,7 @@
   transition: background-color 0.2s;
 }
 
-.typography-examples-explaination{
+#typography-examples-explaination{
   color: white;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
@@ -95,7 +95,7 @@
 
 }
 
-.typography_dos-list, .typography_donts-list {
+#typography_dos-list, #typography_donts-list {
   color: white;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
@@ -150,6 +150,7 @@ nav {
   background-color: #FEC63D;
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 
 i {
