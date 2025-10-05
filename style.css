@@ -1,22 +1,155 @@
-html {
-    scroll-behavior: smooth;
-}
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 .homePage_Animation {
     width: 50%;
     margin: auto;
-    
+}
+
+.typography_image_and_intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3%;
+}
+
+.typography_animation {
+    width: 90%;
+}
+
+#typography_examples-header, #typography_dos-header, #typography_donts-header {
+    color: #FEC63D;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: bold;
+    font-size: 2.3rem;
+    padding-left: 7%;
+}
+
+.typography_examples-card {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;      
+  justify-content: center;
+}
+
+.typography_examples-card-img {
+  display: block;          
+  width: 74%;
+  margin: 0 auto;         
+}
+
+.fa-regular.fa-circle-check,
+.fa-regular.fa-circle-xmark {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;    
+}
+
+.fa-regular.fa-circle-check {
+  color: rgb(2, 195, 2);
+}
+
+.fa-regular.fa-circle-xmark {
+  color: rgb(195, 0, 0);
+}
+
+#typography_examples-cards{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  padding-left: 0.5%;
+  padding-bottom: 2%;
+}
+
+.typography_learn_more_btn {
+    background-color: #FEC63D;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+}
+.modal-button {
+  display: inline-flex;          
+  align-items: center;          
+  justify-content: center;
+  gap: 0.5rem;                   
+  background-color: white;
+  color: #333;
+  padding: 10px 20px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.typography-examples-explaination{
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-bottom: 2%;
+
+}
+
+.typography_dos-list, .typography_donts-list {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  padding-left: 8.5%;
+  padding-right: 7%;
+  margin-bottom: 3%;
+}
+
+.modal-button i {
+  font-size: 1rem;
+}
+
+.typography_examples-card div:last-child {
+  display: flex;
+  align-items: center;       
+  justify-content: center;   
+  gap: 0.4rem;               
+  margin-top: 0.5rem;        
+}
+
+.fa-solid.fa-maximize {
+  padding-right: 0px;
+  font-size: 1rem;
+}
+
+#typography_intro-content {
+  margin-top: 4%;
 }
 
 body {
-    background-color: #182E7C;
+  background-color: #182E7C;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.home-button {
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  padding-right: 10px;
 }
 
 .nav-links {
-    position: sticky;
-    top: 0;
-    background-color: #FEC63D;
-    padding: 0.4rem;
-    text-align: center;
+  padding: 0.4rem;
+  text-align: center;
+}
+
+nav {
+  background-color: #FEC63D;
+  position: sticky;
+  top: 0;
 }
 
 i {
@@ -85,4 +218,207 @@ i:hover {
 
 .dropdown:hover .dropbtn {
   background-color: #FEC63D;
+}
+
+#Repitition_1 {
+  opacity: 0;
+}
+
+#Repitition_2 {
+  opacity: 0;
+}
+
+#Repitition_3 {
+  opacity: 0;
+}
+
+#SizeAndScale_Circle {
+  opacity: 0;
+}
+
+.colour_and_contrast_glow:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 1px #FFFFFF) drop-shadow(0 0 3px #FFFFFF);
+}
+
+.repetition_glow:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 1px #FFFFFF) drop-shadow(0 0 3px #FFFFFF);
+}
+
+.size_and_scale_glow:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 1px #FFFFFF) drop-shadow(0 0 3px #FFFFFF);
+}
+
+.typography_glow:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 1px #FFFFFF) drop-shadow(0 0 3px #FFFFFF);
+}
+
+#Size_SizeAndScale {
+  opacity: 0;
+}
+
+#AndScale_SizeAndScale {
+  opacity: 0;
+}
+
+#AndContrast_ColourAndContrast {
+  opacity: 0;
+}
+
+#Colour_ColourAndContrast {
+  opacity: 0;
+}
+
+#bottomOfT_Typography, #topOfT_Typography, 
+#Y_typography, #bottomOfP_Typography, #topOfP_Typography, 
+#O_Typography, #G_Typography, #R_Typography, #A_Typography, 
+#bottomOfP2_Typography, #topOfP2_Typography, #H_Typography, 
+#Y2_Typography, #underline_Typography {
+  opacity: 0;
+}
+
+#learn_more, #learn_more_text {
+  opacity: 0;
+}
+
+#learn_more:hover{
+  cursor: pointer;
+}
+
+#intro-content{
+  padding-left: 15%;
+  padding-right: 15%;
+  margin-top: -5%
+}
+
+.intro-header {
+  color: #FEC63D;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: bold;
+  font-size: 2.3rem;
+}
+
+.intro-text {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.intro-list {
+  color: #FEC63D;
+  font-size: 1.3rem;
+}
+
+.intro-list-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  color: #FEC63D;
+  font-size: 1.3rem;
+  gap: 5%;
+  padding-left: 1.9%;
+  padding-bottom: 5%;
+}
+
+.intro-list-container a{
+  color: #FEC63D;
+  
+}
+
+.repetition_link {
+  grid-column-start: 2;
+}
+
+:root {
+  --modal-duration: 1s;
+}
+
+
+.button {
+  display: inline-flex;          
+  align-items: center;          
+  justify-content: center;
+  gap: 0.5rem;                   
+  background-color: white;
+  color: #333;
+  padding: 10px 20px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background: black;
+  color: white;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.typography_modal-img {
+  display: block;          
+  width: 100%;
+  margin: 0 auto;         
+}
+
+.modal-content {
+  margin: 10% auto;
+  width: 75%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+
+.modal-header {
+  background: var(--modal-color);
+  padding: 15px;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.modal-body {
+  padding: 30px 30px;
+  background: #fff;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding-right: 20px
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
