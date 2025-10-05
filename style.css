@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 .homePage_Animation {
     width: 50%;
     margin: auto;
 }
 
 .typography_image_and_intro, .size_and_scale_image_and_intro
-, .colour_and_contrast_image_and_intro {
+, .colour_and_contrast_image_and_intro, .repetition_image_and_intro {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 3%;
 }
 
-.typography_animation, .size_and_scale_animation, .colour_and_contrast_animation {
+.typography_animation, .size_and_scale_animation, .colour_and_contrast_animation, 
+.repetition_animation {
     width: 90%;
 }
 
@@ -19,7 +21,8 @@
 #typography_donts-header, #size_and_scale_examples-header, 
 #size_and_scale_dos-header, #size_and_scale_donts-header,
 #colour_and_contrast_examples-header, #colour_and_contrast_dos-header,
-#colour_and_contrast_donts-header {
+#colour_and_contrast_donts-header, #repetition_examples-header,
+#repetition_dos-header, #repetition_donts-header {
     color: #FEC63D;
     font-family: 'Bricolage Grotesque', sans-serif;
     font-weight: bold;
@@ -28,7 +31,7 @@
 }
 
 .typography_examples-card, .size_and_scale_examples-card, 
-.colour_and_contrast_examples-card {
+.colour_and_contrast_examples-card, .repetition_examples-card {
   display: flex;
   flex-direction: column;   
   align-items: center;      
@@ -36,7 +39,7 @@
 }
 
 .typography_examples-card-img, .size_and_scale_examples-card-img, 
-.colour_and_contrast_examples-card-img {
+.colour_and_contrast_examples-card-img, .repetition_examples-card-img {
   display: block;          
   width: 74%;
   margin: 0 auto;         
@@ -57,7 +60,7 @@
 }
 
 #typography_examples-cards, #size_and_scale_examples-cards, 
-#colour_and_contrast_examples-cards {
+#colour_and_contrast_examples-cards, #repetition_examples-cards {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
@@ -66,7 +69,7 @@
 }
 
 .typography_learn_more_btn, .size_and_scale_learn_more_btn, 
-.colour_and_contrast_learn_more_btn {
+.colour_and_contrast_learn_more_btn, .repetition_learn_more_btn {
     background-color: #FEC63D;
     color: black;
     font-family: 'Open Sans', sans-serif;
@@ -93,7 +96,7 @@
 }
 
 #typography-examples-explaination, #size_and_scale-examples-explaination, 
-#colour_and_contrast_examples-explaination {
+#colour_and_contrast_examples-explaination, #repetition-examples-explaination {
   color: white;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
@@ -102,12 +105,12 @@
   padding-left: 7%;
   padding-right: 7%;
   padding-bottom: 2%;
-
 }
 
 #typography_dos-list, #typography_donts-list, 
 #size_and_scale_dos-list, #size_and_scale_donts-list, 
-#colour_and_contrast_dos-list, #colour_and_contrast_donts-list {
+#colour_and_contrast_dos-list, #colour_and_contrast_donts-list, 
+#repetition_dos-list, #repetition_donts-list {
   color: white;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
@@ -234,17 +237,11 @@ i:hover {
   background-color: #FEC63D;
 }
 
-#Repitition_1 {
+#Repitition_1, #Repitition_2, #Repitition_3, #repetition_page_svg_repetitionOne, 
+#repetition_page_svg_repetitionTwo, #repetition_page_svg_repetitionThree {
   opacity: 0;
 }
 
-#Repitition_2 {
-  opacity: 0;
-}
-
-#Repitition_3 {
-  opacity: 0;
-}
 
 #SizeAndScale_Circle {
   opacity: 0;
@@ -319,7 +316,7 @@ i:hover {
   color: white;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 3vmin;
   line-height: 1.5;
   margin-top: 10px;
 }
@@ -386,7 +383,7 @@ i:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.typography_modal-img, .size_and_scale_modal-img, .colour_and_contrast_modal-img {
+.typography_modal-img, .size_and_scale_modal-img, .colour_and_contrast_modal-img, .repetition_modal-img {
   display: block;          
   width: 100%;
   margin: 0 auto;         

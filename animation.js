@@ -432,3 +432,87 @@ gsap.from("#colour_and_contrast_intro-content", {
     ease: "power2.out"
     });
 }
+
+function repetition_page_animations() {
+    const length = document.querySelector("#repetition_page_svg_circle").getTotalLength();
+    TweenMax.set("#repetition_page_svg_circle", { strokeDasharray: length, strokeDashoffset: length });
+    TweenMax.to("#repetition_page_svg_circle", 1.5, {
+      strokeDashoffset: 0,
+    });
+
+    TweenMax.to('#repetition_page_svg_repetitionOne', 1.5, {y:49, opacity: 0.4, delay: 1.5});
+    TweenMax.to('#repetition_page_svg_repetitionTwo', 1.5, {opacity: 0.65, delay: 1.5});
+    TweenMax.to('#repetition_page_svg_repetitionThree', 1.5, {opacity: 1, y:66.5, delay: 1.5});
+
+    gsap.from("#repetition_intro-content", {
+    scrollTrigger: {
+      trigger: "#repetition_intro-content",
+      start: "top 90%",
+      toggleActions: "play reverse play reverse"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
+
+    gsap.from("#repetition_examples-header", {
+    scrollTrigger: {
+      trigger: "#repetition_examples-header",
+      start: "top 90%",
+      toggleActions: "play reverse play reverse"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
+
+    gsap.from("#repetition_examples-cards", {
+    scrollTrigger: {
+      trigger: "#repetition_examples-cards",
+      start: "top 90%",
+      toggleActions: "play reverse play reverse"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
+
+    gsap.from("#repetition_examples-explaination", {
+    scrollTrigger: {
+      trigger: "#repetition_examples-explaination",
+      start: "top 90%",
+      toggleActions: "play reverse play reverse"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
+
+    gsap.from("#repetition_dos-header, #repetition_donts-header", {
+    scrollTrigger: {
+      trigger: "#repetition_dos-header, #repetition_donts-header",
+      start: "top 90%",
+      toggleActions: "play reverse play reverse"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
+
+    gsap.from("#repetition_dos-list, #repetition_donts-list", {
+    scrollTrigger: {
+      trigger: "#repetition_dos-list, #repetition_donts-list",
+      start: "top 90%",
+      toggleActions: "play reverse play reverse"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+    });
+}
