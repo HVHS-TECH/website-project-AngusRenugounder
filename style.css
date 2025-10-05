@@ -12,9 +12,10 @@
     padding: 3%;
 }
 
-.typography_animation, .size_and_scale_animation, .colour_and_contrast_animation, 
+.size_and_scale_animation, .colour_and_contrast_animation, 
 .repetition_animation {
     width: 90%;
+    margin-top: 10%;
 }
 
 #typography_examples-header, #typography_dos-header, 
@@ -26,7 +27,7 @@
     color: #FEC63D;
     font-family: 'Bricolage Grotesque', sans-serif;
     font-weight: bold;
-    font-size: 2.3rem;
+    font-size: 7vmin;
     padding-left: 7%;
 }
 
@@ -47,7 +48,7 @@
 
 .fa-regular.fa-circle-check,
 .fa-regular.fa-circle-xmark {
-  font-size: 2rem;
+  font-size: 7vmin;
   margin-bottom: 0.5rem;    
 }
 
@@ -62,10 +63,10 @@
 #typography_examples-cards, #size_and_scale_examples-cards, 
 #colour_and_contrast_examples-cards, #repetition_examples-cards {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
-  padding-left: 0.5%;
-  padding-bottom: 2%;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  gap: 4%;
 }
 
 .typography_learn_more_btn, .size_and_scale_learn_more_btn, 
@@ -74,21 +75,22 @@
     color: black;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 2% 3%;
     border: none;
     border-radius: 30px;
     text-decoration: none;
+    font-size: 3vmin;
 }
-.modal-button {
+button {
   display: inline-flex;          
   align-items: center;          
   justify-content: center;
   gap: 0.5rem;                   
   background-color: white;
   color: #333;
-  padding: 10px 20px;
+  padding: 2% 3%;
   font-family: 'Bricolage Grotesque', sans-serif;
-  font-size: 1rem;
+  font-size: 4vmin;
   border-radius: 30px;
   text-decoration: none;
   cursor: pointer;
@@ -100,7 +102,7 @@
   color: white;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 3vmin;
   line-height: 1.5;
   padding-left: 7%;
   padding-right: 7%;
@@ -114,7 +116,7 @@
   color: white;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 3vmin;
   line-height: 1.5;
   padding-left: 8.5%;
   padding-right: 7%;
@@ -300,8 +302,8 @@ i:hover {
 }
 
 #intro-content{
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 10%;
+  padding-right: 10%;
   margin-top: -5%
 }
 
@@ -309,7 +311,7 @@ i:hover {
   color: #FEC63D;
   font-family: 'Bricolage Grotesque', sans-serif;
   font-weight: bold;
-  font-size: 2.3rem;
+  font-size: 7vmin;
 }
 
 .intro-text {
@@ -327,10 +329,11 @@ i:hover {
 }
 
 .intro-list-container {
+  font-family: "Bricolage Grotesque", sans-serif;
   display: grid;
   grid-template-columns: auto auto auto auto;
   color: #FEC63D;
-  font-size: 1.3rem;
+  font-size: 4vmin;
   gap: 5%;
   padding-left: 1.9%;
   padding-bottom: 5%;
@@ -347,23 +350,6 @@ i:hover {
 
 :root {
   --modal-duration: 1s;
-}
-
-
-.button {
-  display: inline-flex;          
-  align-items: center;          
-  justify-content: center;
-  gap: 0.5rem;                   
-  background-color: white;
-  color: #333;
-  padding: 10px 20px;
-  font-family: 'Bricolage Grotesque', sans-serif;
-  font-size: 1rem;
-  border-radius: 30px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.2s;
 }
 
 .button:hover {
@@ -432,5 +418,37 @@ i:hover {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .typography_image_and_intro, .size_and_scale_image_and_intro
+  , .colour_and_contrast_image_and_intro, .repetition_image_and_intro  {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-list-container {
+    grid-template-columns: auto auto;
+    gap: 20%;
+  }
+
+  #typography_examples-cards, #size_and_scale_examples-cards, 
+  #colour_and_contrast_examples-cards, #repetition_examples-cards {
+  grid-template-columns: 1fr;
+  }
+
+  .homePage_Animation {
+    width: 100%;
+  }
+
+  .intro-content {
+    margin-top: -30%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .typography_image_and_intro, .size_and_scale_image_and_intro
+  , .colour_and_contrast_image_and_intro, .repetition_image_and_intro  {
+    grid-template-columns: 1fr;
   }
 }
