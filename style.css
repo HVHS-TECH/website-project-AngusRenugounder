@@ -147,6 +147,7 @@ html {
 .nav-links {
   padding: 0.4rem;
   text-align: center;
+  font-family: 'Bricolage Grotesque', sans-serif;
 }
 
 nav {
@@ -376,7 +377,7 @@ i:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.typography_modal-img {
+.typography_modal-img, .size_and_scale_modal-img {
   display: block;          
   width: 100%;
   margin: 0 auto;         
@@ -408,7 +409,8 @@ i:hover {
   float: right;
   font-size: 28px;
   font-weight: bold;
-  padding-right: 20px
+  margin-top: 12px;
+  margin-left: -5px;
 }
 
 .close:hover,

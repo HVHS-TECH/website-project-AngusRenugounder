@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 	</head>
-	<body onload = "size_and_scale_page_animations()">
+	<body onload = "size_and_scale_page_animations(); size_and_scale_modals();">
 		<nav>
 			<div class = "nav-links">
 				<a class = "home-button" href = "index.html">Home</a>
@@ -115,13 +115,13 @@ SIZE
 </ul>
 
 <!-- DO Modal -->
-<div id="size_and_scale-do-modal" class="modal">
+<div id="size_and_scale-do-modal" class="modal" aria-hidden="true">
   <div class="modal-content">
     <div class="modal-header">
       <span class="close">&times;</span>
     </div>
     <div class="modal-body">
-      <img class="size_and_scale_modal-img" src="Images/Size_And_Scale_Do.png" alt="Good size and scale enlarged">
+        <img class="size_and_scale_modal-img" src="Images/Size_And_Scale_Do.png" alt="Good size and scale enlarged">
     </div>
   </div>
 </div>
