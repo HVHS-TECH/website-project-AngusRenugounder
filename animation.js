@@ -329,3 +329,106 @@ gsap.from("#typography_intro-content", {
     ease: "power2.out"
     });
 }
+
+function colour_and_contrast_page_animations() {
+    const length = document.querySelector("#Colour_and_contrast_page_svg_circle").getTotalLength();
+    TweenMax.set("#Colour_and_contrast_page_svg_circle", { strokeDasharray: length, strokeDashoffset: length });
+    TweenMax.to("#Colour_and_contrast_page_svg_circle", 1.5, {
+      strokeDashoffset: 0,
+    });
+
+    const tl = gsap.timeline({  delay: 1.2 });
+
+    tl.to("#Colour_and_contrast_page_svg_and_contrast_part", { 
+      opacity: 1
+    })
+    .to("#Colour_and_contrast_page_svg_and_contrast_part", {
+      fill: "#FEC63D",
+      stroke: "#FEC63D",
+      duration: 4,
+      ease: "power1.inOut",
+    }, ">") 
+
+    .to("#Colour_and_contrast_page_svg_colour_part", {
+      opacity: 1,
+    }, "<") 
+
+    .to("#Colour_and_contrast_page_svg_colour_part", {
+      fill: "#FFFFFF",
+      stroke: "#FFFFFF",
+      duration: 4,
+      ease: "power1.inOut",
+    }, "<")
+
+gsap.from("#colour_and_contrast_intro-content", {
+    scrollTrigger: {
+      trigger: "#colour_and_contrast_intro-content",
+      start: "top 90%",
+      toggleActions: "play reverse play reverse"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
+
+    gsap.from("#colour_and_contrast_examples-header", {
+    scrollTrigger: {
+      trigger: "#colour_and_contrast_examples-header",
+      start: "top 90%",
+      toggleActions: "play reverse play reverse"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
+
+    gsap.from("#colour_and_contrast_examples-cards", {
+    scrollTrigger: {
+      trigger: "#colour_and_contrast_examples-cards",
+      start: "top 90%",
+      toggleActions: "play reverse play reverse"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
+
+    gsap.from("#colour_and_contrast_examples-explaination", {
+    scrollTrigger: {
+      trigger: "#colour_and_contrast_examples-explaination",
+      start: "top 90%",
+      toggleActions: "play reverse play reverse"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
+
+    gsap.from("#colour_and_contrast_dos-header, #colour_and_contrast_donts-header", {
+    scrollTrigger: {
+      trigger: "#colour_and_contrast_dos-header, #colour_and_contrast_donts-header",
+      start: "top 90%",
+      toggleActions: "play reverse play reverse"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
+
+    gsap.from("#colour_and_contrast_dos-list, #colour_and_contrast_donts-list", {
+    scrollTrigger: {
+      trigger: "#colour_and_contrast_dos-list, #colour_and_contrast_donts-list",
+      start: "top 90%",
+      toggleActions: "play reverse play reverse"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+    });
+}
