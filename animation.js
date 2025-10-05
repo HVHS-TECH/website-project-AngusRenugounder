@@ -24,23 +24,7 @@ typography_ids.forEach((id, index) => {
   }
 });
 
-typography_page_svg_ids.forEach((id, index) => {
-  const path = document.getElementById(id);
-  if (path) {
-    const length = path.getTotalLength();
 
-    TweenMax.set(path, {
-      strokeDasharray: length,
-      strokeDashoffset: length,
-      opacity: 0
-    });
-    
-    const tl = new TimelineMax({ delay: 1.5 + index * animationDuration });
-
-    tl.to(path, 0.1, { opacity: 1 }) // fade in
-      .to(path, animationDuration, { strokeDashoffset: 0 }); // draw stroke
-  }
-});
 
 circle_ids.forEach((id) => {
   const path = document.getElementById(id);
@@ -139,6 +123,29 @@ TweenMax.to('#learn_more_text', 2, {opacity: 1, delay: 2});
     ease: "power2.out"
   });
 
+  function typography_page_animations() {
+  typography_page_svg_ids.forEach((id, index) => {
+  const path = document.getElementById(id);
+  if (path) {
+    const length = path.getTotalLength();
+
+    TweenMax.set(path, {
+      strokeDasharray: length,
+      strokeDashoffset: length,
+      opacity: 0
+    });
+    
+    const tl = new TimelineMax({ delay: 1.5 + index * animationDuration });
+
+    tl.to(path, 0.1, { opacity: 1 }) // fade in
+      .to(path, animationDuration, { strokeDashoffset: 0 }); // draw stroke
+  }
+});
+    const length = document.querySelector("#typography_page_svg_circle").getTotalLength();
+    TweenMax.set("#typography_page_svg_circle", { strokeDasharray: length, strokeDashoffset: length });
+    TweenMax.to("#typography_page_svg_circle", 1.5, {
+      strokeDashoffset: 0,
+    });
     gsap.from("#typography_intro-content", {
     scrollTrigger: {
       trigger: "#typography_intro-content",
@@ -150,7 +157,6 @@ TweenMax.to('#learn_more_text', 2, {opacity: 1, delay: 2});
     duration: 1,
     ease: "power2.out"
   });
-
 
     gsap.from("#typography_examples-header", {
     scrollTrigger: {
@@ -190,7 +196,7 @@ TweenMax.to('#learn_more_text', 2, {opacity: 1, delay: 2});
 
     gsap.from("#typography_dos-header, #typography_donts-header", {
     scrollTrigger: {
-      trigger: "#typography-examples-explaination",
+      trigger: "#typography_dos-header, #typography_donts-header",
       start: "top 90%",
       toggleActions: "play reverse play reverse"
     },
@@ -202,7 +208,58 @@ TweenMax.to('#learn_more_text', 2, {opacity: 1, delay: 2});
 
     gsap.from("#typography_dos-list, typography_donts-list", {
     scrollTrigger: {
-      trigger: "#typography-examples-explaination",
+      trigger: "#typography_dos-list, typography_donts-list",
+      start: "top 90%",
+      toggleActions: "play reverse play reverse"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+    });
+
+  }
+
+function size_and_scale_page_animations() {
+    const length = document.querySelector("#Size_and_scale_page_svg_circle").getTotalLength();
+    TweenMax.set("#Size_and_scale_page_svg_circle", { strokeDasharray: length, strokeDashoffset: length });
+    TweenMax.to("#Size_and_scale_page_svg_circle", 1.5, {
+      strokeDashoffset: 0,
+    });
+    gsap.to("#Size_and_scale_page_svg_size_part", {
+      duration: 1,
+      opacity: 1,
+      delay: 0.9,
+      onComplete: () => {
+        // Fade in after movement finishes
+        gsap.to("#Size_and_scale_page_svg_size_part", {
+          duration: 3,
+          scale: 1.5,
+          x: 18,
+          y: 22,
+          ease: "power2.out",
+        });
+      }
+    });
+
+TweenMax.to("#Size_and_scale_page_svg_and_scale_part", 1, {
+  opacity: 1,
+  delay: 0.9,
+  onComplete: () => {
+    // After fade-in completes, move and change color
+    TweenMax.to("#Size_and_scale_page_svg_and_scale_part", 3, {
+      y: 40,
+      x: 18,
+      fill: "#FEC63D",
+      stroke: "#FEC63D",
+      ease: Power2.easeOut
+    });
+  }
+});
+
+gsap.from("#typography_intro-content", {
+    scrollTrigger: {
+      trigger: "#typography_intro-content",
       start: "top 90%",
       toggleActions: "play reverse play reverse"
     },
@@ -212,11 +269,63 @@ TweenMax.to('#learn_more_text', 2, {opacity: 1, delay: 2});
     ease: "power2.out"
   });
 
+    gsap.from("#typography_examples-header", {
+    scrollTrigger: {
+      trigger: "#typography_examples-header",
+      start: "top 90%",
+      toggleActions: "play reverse play reverse"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
 
-    const length = document.querySelector("#typography_page_svg_circle").getTotalLength();
+    gsap.from("#size_and_scale_examples-cards", {
+    scrollTrigger: {
+      trigger: "#size_and_scale_examples-cards",
+      start: "top 90%",
+      toggleActions: "play reverse play reverse"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
 
-    TweenMax.set("#typography_page_svg_circle", { strokeDasharray: length, strokeDashoffset: length });
+    gsap.from("#size_and_scale_examples-explaination", {
+    scrollTrigger: {
+      trigger: "#size_and_scale_examples-explaination",
+      start: "top 90%",
+      toggleActions: "play reverse play reverse"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
 
-    TweenMax.to("#typography_page_svg_circle", 1.5, {
-      strokeDashoffset: 0,
+    gsap.from("#size_and_scale_dos-header, #size_and_scale_donts-header", {
+    scrollTrigger: {
+      trigger: "#size_and_scale_dos-header, #size_and_scale_donts-header",
+      start: "top 90%",
+      toggleActions: "play reverse play reverse"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
+  });
+
+    gsap.from("#size_and_scale_dos-list, #size_and_scale_donts-list", {
+    scrollTrigger: {
+      trigger: "#size_and_scale_dos-list, #size_and_scale_donts-list",
+      start: "top 90%",
+      toggleActions: "play reverse play reverse"
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out"
     });
+}
